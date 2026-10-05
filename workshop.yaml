@@ -31,13 +31,15 @@ subjects:
 
   - repo: kevin-cazal/pypong_subject
     path: pypong_subject
-    # `submodule` follows the pin recorded in this repo — what a clone gives
-    # you. Put a branch here (`main`) while you are editing that subject and
-    # want its tip on every sync; put a tag or a sha to freeze it for a session.
-    ref: submodule
+    # A branch: every sync from the admin panel takes that subject's tip, which
+    # is what a dev instance wants while the subjects are being written. Put
+    # `submodule` to follow the pin recorded in this repo (what a clone gives
+    # you), or a tag or a sha, to freeze a subject for a session.
+    # The command line reads `path`, so it still imports the submodule checkout.
+    ref: content/lint-fixes
     role: advanced
 
   - repo: kevin-cazal/luapong_subject
     path: luapong_subject
-    ref: submodule
+    ref: main
     role: advanced
