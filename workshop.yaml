@@ -10,6 +10,9 @@
 # "free choice" (docs/CONTENT_CONVENTION.md §4.1): both open once the starter
 # is read, and neither gates the other.
 #
+# Two bonus subjects, JSPong and RubyPong, open once both are finished: the
+# same game again, in a third and a fourth language.
+#
 # Two ways to sync this workshop, and they read the same file:
 #
 #   the admin panel   /admin/workshop/sync on the instance, which fetches this
@@ -43,3 +46,14 @@ subjects:
     path: luapong_subject
     ref: main
     role: advanced
+
+  # The two bonus subjects live in this repo, like the starter. `after` names
+  # the subjects (by `project.slug`) that must both be finished before they
+  # open.
+  - path: jspong
+    role: advanced
+    after: [pypong, luapong]
+
+  - path: rubypong
+    role: advanced
+    after: [pypong, luapong]

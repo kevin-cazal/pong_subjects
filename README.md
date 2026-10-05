@@ -9,8 +9,18 @@ Deux sujets, le même jeu, un langage chacun. Ce dépôt les compose et porte la
 | démarrage | [Accueil](accueil/) | lire quelques lignes : deux sujets, la même console, le même jeu |
 | au choix | [PyPong](https://github.com/kevin-cazal/pypong_subject) | un Pong à un joueur en Python : le pad, la balle, les rebonds, le score, les vies |
 | au choix | [LuaPong](https://github.com/kevin-cazal/luapong_subject) | le même jeu, étape par étape, en Lua |
+| bonus | [JSPong](jspong/) | refaire le même jeu en JavaScript |
+| bonus | [RubyPong](rubypong/) | refaire le même jeu en Ruby |
 
 Une fois l'accueil lu, les deux sujets s'ouvrent en même temps. Le participant fait l'un, l'autre, ou les deux, dans l'ordre qu'il veut. Les deux sujets ont les mêmes étapes et les mêmes quiz, seul le langage change.
+
+## Les deux bonus
+
+`jspong/` et `rubypong/` vivent aussi dans ce dépôt. Chacun tient en une courte introduction et une seule étape, validée par un code que l'encadrant donne quand le jeu fonctionne.
+
+Ils s'ouvrent quand PyPong **et** LuaPong sont terminés : c'est le rôle de `after: [pypong, luapong]` dans `workshop.yaml`. Cette clé demande une plateforme qui inclut [la PR « after »](https://github.com/Manta-Epitech-Academy/ctfd-workshop-platform/pull/44) ; sans elle, les bonus s'ouvrent dès l'accueil lu.
+
+Les codes sont propres à chaque instance : ils se lisent sur sa page `/admin/workshop/answers`.
 
 ## L'accueil, un sujet à part
 
