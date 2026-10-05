@@ -1,0 +1,34 @@
+# Pong — two subjects, the same game, one per language. A participant does
+# PyPong, LuaPong, or both, in the order they like: neither gates the other.
+#
+# That is why there is no `role: starter` here. Both subjects are unordered
+# `advanced` ones, which the convention already reads as "free choice"
+# (docs/CONTENT_CONVENTION.md §4.1), and nothing comes before them.
+#
+# Two ways to sync this workshop, and they read the same file:
+#
+#   the admin panel   /admin/workshop/sync on the instance, which fetches this
+#                     repo and then each subject from `repo` at `ref`
+#   the command line  python3 tools/sync_workshop.py <a --recursive clone>
+#                     --url ... --admin-user admin --admin-pass ...
+#                     which reads `path`, the submodule directory
+schema_version: "2.0"
+
+workshop:
+  name: "Pong"
+  slug: "pong"
+  summary: "Crée ton jeu Pong avec TIC-80, en Python ou en Lua : à toi de choisir."
+
+subjects:
+  - repo: kevin-cazal/pypong_subject
+    path: pypong_subject
+    # `submodule` follows the pin recorded in this repo — what a clone gives
+    # you. Put a branch here (`main`) while you are editing that subject and
+    # want its tip on every sync; put a tag or a sha to freeze it for a session.
+    ref: submodule
+    role: advanced
+
+  - repo: kevin-cazal/luapong_subject
+    path: luapong_subject
+    ref: submodule
+    role: advanced

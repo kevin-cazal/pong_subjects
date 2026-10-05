@@ -1,0 +1,6 @@
+[submodule "pypong_subject"]
+	path = pypong_subject
+	url = https://github.com/kevin-cazal/pypong_subject.git
+[submodule "luapong_subject"]
+	path = luapong_subject
+	url = https://github.com/kevin-cazal/luapong_subject.git
