@@ -39,7 +39,7 @@ subjects:
     # `submodule` to follow the pin recorded in this repo (what a clone gives
     # you), or a tag or a sha, to freeze a subject for a session.
     # The command line reads `path`, so it still imports the submodule checkout.
-    ref: content/lint-fixes
+    ref: main
     role: advanced
 
   - repo: kevin-cazal/luapong_subject

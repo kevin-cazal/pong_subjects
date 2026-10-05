@@ -46,7 +46,7 @@ Depuis une instance déjà déployée, la page `/admin/workshop/sync` fait la m�
 
 ## Mettre à jour un sujet
 
-Depuis la page `/admin/workshop/sync`, chaque import prend la tête de la branche indiquée par `ref:` dans `workshop.yaml` (`content/lint-fixes` pour PyPong, `main` pour LuaPong) : pousser sur un sujet puis cliquer sur Sync suffit. Pour figer un sujet avant une session, remettre `ref: submodule`, un tag ou un commit.
+Depuis la page `/admin/workshop/sync`, chaque import prend la tête de la branche indiquée par `ref:` dans `workshop.yaml` (`main` pour PyPong comme pour LuaPong) : pousser sur un sujet puis cliquer sur Sync suffit. Pour figer un sujet avant une session, remettre `ref: submodule`, un tag ou un commit.
 
 En ligne de commande, c'est le sous-module qui est lu : pousser sur un sujet ne change rien tant que le pointeur n'est pas avancé ici.
 
