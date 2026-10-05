@@ -2,20 +2,23 @@
 
 Crée ton jeu Pong avec TIC-80, en Python ou en Lua : à toi de choisir.
 
-Deux sujets, le même jeu, un langage chacun. Ce dépôt ne contient pas de contenu : il compose les deux, et c'est lui qu'une instance CTFd de la plateforme [CTFd_coding_platform](https://github.com/kevin-cazal/CTFd_coding_platform) importe.
+Deux sujets, le même jeu, un langage chacun. Ce dépôt les compose et porte la page d'accueil, et c'est lui qu'une instance CTFd de la plateforme [CTFd_coding_platform](https://github.com/kevin-cazal/CTFd_coding_platform) importe.
 
-| Sujet | Langage | Ce qu'on y fait |
+| Ordre | Sujet | Ce qu'on y fait |
 |---|---|---|
-| [PyPong](https://github.com/kevin-cazal/pypong_subject) | Python | un Pong à un joueur : le pad, la balle, les rebonds, le score, les vies |
-| [LuaPong](https://github.com/kevin-cazal/luapong_subject) | Lua | le même jeu, étape par étape, en Lua |
+| démarrage | [Accueil](accueil/) | lire quelques lignes : deux sujets, la même console, le même jeu |
+| au choix | [PyPong](https://github.com/kevin-cazal/pypong_subject) | un Pong à un joueur en Python : le pad, la balle, les rebonds, le score, les vies |
+| au choix | [LuaPong](https://github.com/kevin-cazal/luapong_subject) | le même jeu, étape par étape, en Lua |
 
-Aucun ordre imposé : le participant fait l'un, l'autre, ou les deux, dans l'ordre qu'il veut. Les deux sujets ont les mêmes étapes et les mêmes quiz, seul le langage change.
+Une fois l'accueil lu, les deux sujets s'ouvrent en même temps. Le participant fait l'un, l'autre, ou les deux, dans l'ordre qu'il veut. Les deux sujets ont les mêmes étapes et les mêmes quiz, seul le langage change.
 
-## À savoir avant d'importer
+## L'accueil, un sujet à part
 
-`workshop.yaml` ne déclare aucun `role: starter` : les deux sujets sont au libre choix. La plateforme exige aujourd'hui exactement un starter, et `tools/sync_workshop.py` refuse donc ce fichier (`expected exactly one subject with role: starter, found 0`).
+`accueil/` est le starter de l'atelier, et il vit dans ce dépôt. Il tient en une étape : un texte court et un bouton « J'ai lu ».
 
-En attendant que la plateforme accepte un atelier sans starter, passer PyPong en `role: starter` rend l'import possible, mais impose alors de finir PyPong avant LuaPong.
+C'est une exception voulue : il n'a aucun exercice, donc ni étape de clôture, ni avis à donner, ni « Pour aller plus loin ». Dans `workshop.yaml`, il est désigné par un simple `path:`, sans `repo:`.
+
+Cette forme demande une plateforme qui inclut [la PR « one-step starter »](https://github.com/Manta-Epitech-Academy/ctfd-workshop-platform/pull/41) : sans elle, les deux sujets s'importent sans attendre l'accueil, et l'accueil n'apparaît sur aucune page.
 
 ## Mettre cet atelier en ligne
 

@@ -1,9 +1,14 @@
-# Pong — two subjects, the same game, one per language. A participant does
-# PyPong, LuaPong, or both, in the order they like: neither gates the other.
+# Pong — the same game in two languages. A participant reads the starter, then
+# does PyPong, LuaPong, or both, in the order they like.
 #
-# That is why there is no `role: starter` here. Both subjects are unordered
-# `advanced` ones, which the convention already reads as "free choice"
-# (docs/CONTENT_CONVENTION.md §4.1), and nothing comes before them.
+# The starter lives in this repo (`accueil/`) and is one step long: a few lines
+# saying what the two subjects share, and an "I have read this" button. It is
+# an exception among subjects on purpose: no exercise, so no closing step, no
+# rating and no "going further" at its end.
+#
+# The two subjects are unordered `advanced` ones, which the convention reads as
+# "free choice" (docs/CONTENT_CONVENTION.md §4.1): both open once the starter
+# is read, and neither gates the other.
 #
 # Two ways to sync this workshop, and they read the same file:
 #
@@ -20,6 +25,10 @@ workshop:
   summary: "Crée ton jeu Pong avec TIC-80, en Python ou en Lua : à toi de choisir."
 
 subjects:
+  # No `repo`: this one is a directory of this repository.
+  - path: accueil
+    role: starter
+
   - repo: kevin-cazal/pypong_subject
     path: pypong_subject
     # `submodule` follows the pin recorded in this repo — what a clone gives

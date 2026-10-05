@@ -1,0 +1,24 @@
+# The starter of the Pong workshop — convention 2.0 (docs/CONTENT_CONVENTION.md §3.2).
+# One document and no exercise: the platform turns it into a single "I have
+# read this" step on the workshop's front page, with no closing step after it.
+# It has no runtime of its own: the workshop takes TIC-80 from the two subjects.
+schema_version: "2.0"
+
+project:
+  name: "Pong"
+  slug: "pong-accueil"
+  summary: "Crée ton jeu Pong avec TIC-80, en Python ou en Lua : à toi de choisir."
+  entrypoint: "intro.md"
+
+platform:
+  mode_default: instructor_led
+  validation_default: checkpoint
+  points_default: 25
+
+documents:
+  - intro.md
+
+cover:
+  media: img/pong.gif
+  poster: img/pong.png
+  tagline: "Le même jeu, deux langages : Python ou Lua."
